@@ -1,0 +1,64 @@
+package defpackage;
+
+import android.os.IInterface;
+import android.os.Parcel;
+import android.os.RemoteException;
+import android.util.Log;
+import java.io.UnsupportedEncodingException;
+import java.util.Arrays;
+
+/* JADX INFO: loaded from: classes.dex */
+public abstract class kf3 extends u90 implements IInterface {
+    public final int g;
+
+    public kf3(byte[] bArr) {
+        super("com.google.android.gms.common.internal.ICertData", 1);
+        rn3.c(bArr.length == 25);
+        this.g = Arrays.hashCode(bArr);
+    }
+
+    public static byte[] Y0(String str) {
+        try {
+            return str.getBytes("ISO-8859-1");
+        } catch (UnsupportedEncodingException e) {
+            throw new AssertionError(e);
+        }
+    }
+
+    @Override // defpackage.u90
+    public final boolean D0(int i, Parcel parcel, Parcel parcel2) {
+        if (i == 1) {
+            ru ruVar = new ru(S0());
+            parcel2.writeNoException();
+            xa1.b(parcel2, ruVar);
+            return true;
+        }
+        if (i != 2) {
+            return false;
+        }
+        parcel2.writeNoException();
+        parcel2.writeInt(this.g);
+        return true;
+    }
+
+    public abstract byte[] S0();
+
+    public final boolean equals(Object obj) {
+        if (obj instanceof kf3) {
+            try {
+                kf3 kf3Var = (kf3) obj;
+                if (kf3Var.g == this.g) {
+                    return Arrays.equals(S0(), (byte[]) ru.Y0(new ru(kf3Var.S0())));
+                }
+            } catch (RemoteException e) {
+                Log.e("GoogleCertificates", "Failed to get Google certificates from remote", e);
+                return false;
+            }
+        }
+        return false;
+    }
+
+    public final int hashCode() {
+        return this.g;
+    }
+}

@@ -1,0 +1,37 @@
+package defpackage;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class b92 extends gm3 {
+    private static final b92 zzb;
+    private int zzd;
+    private s82 zze;
+    private sh3 zzf;
+    private int zzg;
+
+    static {
+        b92 b92Var = new b92();
+        zzb = b92Var;
+        gm3.k(b92.class, b92Var);
+    }
+
+    @Override // defpackage.gm3
+    public final Object f(int i) {
+        int i2 = i - 1;
+        if (i2 == 0) {
+            return (byte) 1;
+        }
+        if (i2 == 2) {
+            return new on3(zzb, "\u0004\u0003\u0000\u0001\u0001\u0004\u0003\u0000\u0000\u0000\u0001ဉ\u0000\u0003᠌\u0002\u0004ဉ\u0001", new Object[]{"zzd", "zze", "zzg", km.H, "zzf"});
+        }
+        if (i2 == 3) {
+            return new b92();
+        }
+        if (i2 == 4) {
+            return new e02(zzb);
+        }
+        if (i2 == 5) {
+            return zzb;
+        }
+        throw null;
+    }
+}
