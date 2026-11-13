@@ -1,0 +1,16 @@
+###### Class com.multaitechnology.fix_speaker_disable_earphone_headphone.R is created by jadx
+###### Class com.multaitechnology.fix_speaker_disable_earphone_headphone.R.anim is created by jadx
+###### Class com.multaitechnology.fix_speaker_disable_earphone_headphone.R.attr is created by jadx
+###### Class com.multaitechnology.fix_speaker_disable_earphone_headphone.R.bool is created by jadx
+###### Class com.multaitechnology.fix_speaker_disable_earphone_headphone.R.color is created by jadx
+###### Class com.multaitechnology.fix_speaker_disable_earphone_headphone.R.dimen is created by jadx
+###### Class com.multaitechnology.fix_speaker_disable_earphone_headphone.R.drawable is created by jadx
+###### Class com.multaitechnology.fix_speaker_disable_earphone_headphone.R.id is created by jadx
+###### Class com.multaitechnology.fix_speaker_disable_earphone_headphone.R.integer is created by jadx
+###### Class com.multaitechnology.fix_speaker_disable_earphone_headphone.R.interpolator is created by jadx
+###### Class com.multaitechnology.fix_speaker_disable_earphone_headphone.R.layout is created by jadx
+###### Class com.multaitechnology.fix_speaker_disable_earphone_headphone.R.menu is created by jadx
+###### Class com.multaitechnology.fix_speaker_disable_earphone_headphone.R.mipmap is created by jadx
+###### Class com.multaitechnology.fix_speaker_disable_earphone_headphone.R.string is created by jadx
+###### Class com.multaitechnology.fix_speaker_disable_earphone_headphone.R.style is created by jadx
+###### Class com.multaitechnology.fix_speaker_disable_earphone_headphone.R.xml is created by jadx

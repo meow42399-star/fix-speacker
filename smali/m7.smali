@@ -1,0 +1,242 @@
+###### Class defpackage.m7 (m7)
+.class public final Lm7;
+.super Lnk1;
+.source "SourceFile"
+
+
+# static fields
+.field public static volatile i:Lm7;
+
+.field public static final j:Ll7;
+
+
+# instance fields
+.field public final h:Lcf;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 2
+
+    .line 1
+    new-instance v0, Ll7;
+
+    .line 2
+    .line 3
+    const/4 v1, 0x0
+
+    .line 4
+    invoke-direct {v0, v1}, Ll7;-><init>(I)V
+
+    .line 5
+    .line 6
+    .line 7
+    sput-object v0, Lm7;->j:Ll7;
+
+    .line 8
+    .line 9
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .registers 2
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    new-instance v0, Lcf;
+
+    .line 5
+    .line 6
+    invoke-direct {v0}, Lcf;-><init>()V
+
+    .line 7
+    .line 8
+    .line 9
+    iput-object v0, p0, Lm7;->h:Lcf;
+
+    .line 10
+    .line 11
+    return-void
+.end method
+
+.method public static y()Lm7;
+    .registers 2
+
+    .line 1
+    sget-object v0, Lm7;->i:Lm7;
+
+    .line 2
+    .line 3
+    if-eqz v0, :cond_7
+
+    .line 4
+    .line 5
+    sget-object v0, Lm7;->i:Lm7;
+
+    .line 6
+    .line 7
+    return-object v0
+
+    .line 8
+    :cond_7
+    const-class v0, Lm7;
+
+    .line 9
+    .line 10
+    monitor-enter v0
+
+    .line 11
+    :try_start_a
+    sget-object v1, Lm7;->i:Lm7;
+
+    .line 12
+    .line 13
+    if-nez v1, :cond_18
+
+    .line 14
+    .line 15
+    new-instance v1, Lm7;
+
+    .line 16
+    .line 17
+    invoke-direct {v1}, Lm7;-><init>()V
+
+    .line 18
+    .line 19
+    .line 20
+    sput-object v1, Lm7;->i:Lm7;
+
+    .line 21
+    .line 22
+    goto :goto_18
+
+    .line 23
+    :catchall_16
+    move-exception v1
+
+    .line 24
+    goto :goto_1c
+
+    .line 25
+    :cond_18
+    :goto_18
+    monitor-exit v0
+    :try_end_19
+    .catchall {:try_start_a .. :try_end_19} :catchall_16
+
+    .line 26
+    sget-object v0, Lm7;->i:Lm7;
+
+    .line 27
+    .line 28
+    return-object v0
+
+    .line 29
+    :goto_1c
+    :try_start_1c
+    monitor-exit v0
+    :try_end_1d
+    .catchall {:try_start_1c .. :try_end_1d} :catchall_16
+
+    .line 30
+    throw v1
+.end method
+
+
+# virtual methods
+.method public final z(Ljava/lang/Runnable;)V
+    .registers 4
+
+    .line 1
+    iget-object p0, p0, Lm7;->h:Lcf;
+
+    .line 2
+    .line 3
+    iget-object v0, p0, Lcf;->j:Landroid/os/Handler;
+
+    .line 4
+    .line 5
+    if-nez v0, :cond_1e
+
+    .line 6
+    .line 7
+    iget-object v0, p0, Lcf;->h:Ljava/lang/Object;
+
+    .line 8
+    .line 9
+    monitor-enter v0
+
+    .line 10
+    :try_start_9
+    iget-object v1, p0, Lcf;->j:Landroid/os/Handler;
+
+    .line 11
+    .line 12
+    if-nez v1, :cond_1a
+
+    .line 13
+    .line 14
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v1
+
+    .line 18
+    invoke-static {v1}, Lcf;->y(Landroid/os/Looper;)Landroid/os/Handler;
+
+    .line 19
+    .line 20
+    .line 21
+    move-result-object v1
+
+    .line 22
+    iput-object v1, p0, Lcf;->j:Landroid/os/Handler;
+
+    .line 23
+    .line 24
+    goto :goto_1a
+
+    .line 25
+    :catchall_18
+    move-exception p0
+
+    .line 26
+    goto :goto_1c
+
+    .line 27
+    :cond_1a
+    :goto_1a
+    monitor-exit v0
+
+    .line 28
+    goto :goto_1e
+
+    .line 29
+    :goto_1c
+    monitor-exit v0
+    :try_end_1d
+    .catchall {:try_start_9 .. :try_end_1d} :catchall_18
+
+    .line 30
+    throw p0
+
+    .line 31
+    :cond_1e
+    :goto_1e
+    iget-object p0, p0, Lcf;->j:Landroid/os/Handler;
+
+    .line 32
+    .line 33
+    invoke-virtual {p0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    .line 34
+    .line 35
+    .line 36
+    return-void
+.end method

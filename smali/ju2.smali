@@ -1,0 +1,83 @@
+###### Class defpackage.ju2 (ju2)
+.class public final Lju2;
+.super Llu2;
+.source "SourceFile"
+
+
+# virtual methods
+.method public final synthetic s(Ljava/lang/Object;)V
+    .registers 2
+
+    .line 1
+    check-cast p1, Llq;
+
+    .line 2
+    .line 3
+    invoke-virtual {p0, p1}, Lzt2;->m(Llq;)V
+
+    .line 4
+    .line 5
+    .line 6
+    return-void
+.end method
+
+.method public final t(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .registers 3
+
+    .line 1
+    check-cast p1, Lsu2;
+
+    .line 2
+    .line 3
+    invoke-interface {p1, p2}, Lsu2;->p(Ljava/lang/Object;)Llq;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p0
+
+    .line 7
+    if-eqz p0, :cond_9
+
+    .line 8
+    .line 9
+    return-object p0
+
+    .line 10
+    :cond_9
+    const/4 p0, 0x1
+
+    .line 11
+    new-array p0, p0, [Ljava/lang/Object;
+
+    .line 12
+    .line 13
+    const/4 p2, 0x0
+
+    .line 14
+    aput-object p1, p0, p2
+
+    .line 15
+    .line 16
+    const-string p1, "AsyncFunction.apply returned null instead of a Future. Did you mean to return immediateFuture(null)? %s"
+
+    .line 17
+    .line 18
+    invoke-static {p1, p0}, Lqj2;->B(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 19
+    .line 20
+    .line 21
+    move-result-object p0
+
+    .line 22
+    invoke-static {p0}, Lu1;->g(Ljava/lang/String;)V
+
+    .line 23
+    .line 24
+    .line 25
+    const/4 p0, 0x0
+
+    .line 26
+    return-object p0
+.end method

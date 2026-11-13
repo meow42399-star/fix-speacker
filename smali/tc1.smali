@@ -1,0 +1,15 @@
+###### Class defpackage.tc1 (tc1)
+.class public interface abstract Ltc1;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/os/IInterface;
+
+
+# virtual methods
+.method public abstract b()Ljava/lang/String;
+.end method
+
+.method public abstract d()I
+.end method

@@ -1,0 +1,99 @@
+###### Class defpackage.jv1 (jv1)
+.class public final synthetic Ljv1;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lld0;
+
+
+# instance fields
+.field public final synthetic f:I
+
+.field public final synthetic g:Ljava/lang/Object;
+
+
+# direct methods
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .registers 3
+
+    .line 1
+    iput p1, p0, Ljv1;->f:I
+
+    iput-object p2, p0, Ljv1;->g:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic i()V
+    .registers 2
+
+    .line 1
+    iget v0, p0, Ljv1;->f:I
+
+    .line 2
+    .line 3
+    iget-object p0, p0, Ljv1;->g:Ljava/lang/Object;
+
+    .line 4
+    .line 5
+    packed-switch v0, :pswitch_data_1c
+
+    .line 6
+    .line 7
+    .line 8
+    check-cast p0, Lcw1;
+
+    .line 9
+    .line 10
+    iget-object p0, p0, Lcw1;->c:Llp1;
+
+    .line 11
+    .line 12
+    invoke-virtual {p0}, Llp1;->a2()V
+
+    .line 13
+    .line 14
+    .line 15
+    return-void
+
+    .line 16
+    :pswitch_f
+    check-cast p0, Llp1;
+
+    .line 17
+    .line 18
+    invoke-virtual {p0}, Llp1;->a2()V
+
+    .line 19
+    .line 20
+    .line 21
+    return-void
+
+    .line 22
+    :pswitch_15
+    check-cast p0, Llp1;
+
+    .line 23
+    .line 24
+    invoke-virtual {p0}, Llp1;->a2()V
+
+    .line 25
+    .line 26
+    .line 27
+    return-void
+
+    .line 28
+    nop
+
+    .line 29
+    :pswitch_data_1c
+    .packed-switch 0x0
+        :pswitch_15
+        :pswitch_f
+    .end packed-switch
+.end method

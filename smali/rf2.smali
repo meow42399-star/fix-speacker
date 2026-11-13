@@ -1,0 +1,803 @@
+###### Class defpackage.rf2 (rf2)
+.class public abstract Lrf2;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field public final a:Ljava/lang/String;
+
+.field public b:Leg2;
+
+.field public c:J
+
+.field public d:I
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;)V
+    .registers 4
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-wide v0
+
+    .line 8
+    iput-wide v0, p0, Lrf2;->c:J
+
+    .line 9
+    .line 10
+    const/4 v0, 0x1
+
+    .line 11
+    iput v0, p0, Lrf2;->d:I
+
+    .line 12
+    .line 13
+    iput-object p1, p0, Lrf2;->a:Ljava/lang/String;
+
+    .line 14
+    .line 15
+    new-instance p1, Leg2;
+
+    .line 16
+    .line 17
+    const/4 v0, 0x0
+
+    .line 18
+    invoke-direct {p1, v0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    .line 19
+    .line 20
+    .line 21
+    iput-object p1, p0, Lrf2;->b:Leg2;
+
+    .line 22
+    .line 23
+    return-void
+.end method
+
+
+# virtual methods
+.method public a()V
+    .registers 1
+
+    .line 1
+    return-void
+.end method
+
+.method public b()V
+    .registers 1
+
+    .line 1
+    iget-object p0, p0, Lrf2;->b:Leg2;
+
+    .line 2
+    .line 3
+    invoke-virtual {p0}, Ljava/lang/ref/Reference;->clear()V
+
+    .line 4
+    .line 5
+    .line 6
+    return-void
+.end method
+
+.method public final c()Landroid/webkit/WebView;
+    .registers 1
+
+    .line 1
+    iget-object p0, p0, Lrf2;->b:Leg2;
+
+    .line 2
+    .line 3
+    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p0
+
+    .line 7
+    check-cast p0, Landroid/webkit/WebView;
+
+    .line 8
+    .line 9
+    return-object p0
+.end method
+
+.method public d(Lwe2;Lv30;)V
+    .registers 4
+
+    .line 1
+    const/4 v0, 0x0
+
+    .line 2
+    invoke-virtual {p0, p1, p2, v0}, Lrf2;->e(Lwe2;Lv30;Lorg/json/JSONObject;)V
+
+    .line 3
+    .line 4
+    .line 5
+    return-void
+.end method
+
+.method public final e(Lwe2;Lv30;Lorg/json/JSONObject;)V
+    .registers 14
+
+    .line 1
+    iget-object p1, p1, Lwe2;->g:Ljava/lang/String;
+
+    .line 2
+    .line 3
+    new-instance v0, Lorg/json/JSONObject;
+
+    .line 4
+    .line 5
+    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
+
+    .line 6
+    .line 7
+    .line 8
+    const-string v1, "environment"
+
+    .line 9
+    .line 10
+    const-string v2, "app"
+
+    .line 11
+    .line 12
+    invoke-static {v0, v1, v2}, Luf2;->b(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 13
+    .line 14
+    .line 15
+    iget-object v1, p2, Lv30;->l:Ljava/lang/Object;
+
+    .line 16
+    .line 17
+    check-cast v1, Lve2;
+
+    .line 18
+    .line 19
+    const-string v3, "adSessionType"
+
+    .line 20
+    .line 21
+    invoke-static {v0, v3, v1}, Luf2;->b(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 22
+    .line 23
+    .line 24
+    new-instance v1, Lorg/json/JSONObject;
+
+    .line 25
+    .line 26
+    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
+
+    .line 27
+    .line 28
+    .line 29
+    sget-object v3, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+
+    .line 30
+    .line 31
+    sget-object v4, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    .line 32
+    .line 33
+    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 34
+    .line 35
+    .line 36
+    move-result-object v5
+
+    .line 37
+    invoke-virtual {v5}, Ljava/lang/String;->length()I
+
+    .line 38
+    .line 39
+    .line 40
+    move-result v5
+
+    .line 41
+    invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 42
+    .line 43
+    .line 44
+    move-result-object v6
+
+    .line 45
+    invoke-virtual {v6}, Ljava/lang/String;->length()I
+
+    .line 46
+    .line 47
+    .line 48
+    move-result v6
+
+    .line 49
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    .line 50
+    .line 51
+    const/4 v8, 0x2
+
+    .line 52
+    add-int/2addr v5, v8
+
+    .line 53
+    add-int/2addr v5, v6
+
+    .line 54
+    invoke-direct {v7, v5}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    .line 55
+    .line 56
+    .line 57
+    const-string v5, "; "
+
+    .line 58
+    .line 59
+    invoke-static {v7, v3, v5, v4}, Luc;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 60
+    .line 61
+    .line 62
+    move-result-object v3
+
+    .line 63
+    const-string v4, "deviceType"
+
+    .line 64
+    .line 65
+    invoke-static {v1, v4, v3}, Luf2;->b(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 66
+    .line 67
+    .line 68
+    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 69
+    .line 70
+    invoke-static {v3}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+
+    .line 71
+    .line 72
+    .line 73
+    move-result-object v3
+
+    .line 74
+    const-string v4, "osVersion"
+
+    .line 75
+    .line 76
+    invoke-static {v1, v4, v3}, Luf2;->b(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 77
+    .line 78
+    .line 79
+    const-string v3, "os"
+
+    .line 80
+    .line 81
+    const-string v4, "Android"
+
+    .line 82
+    .line 83
+    invoke-static {v1, v3, v4}, Luf2;->b(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 84
+    .line 85
+    .line 86
+    const-string v3, "deviceInfo"
+
+    .line 87
+    .line 88
+    invoke-static {v0, v3, v1}, Luf2;->b(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 89
+    .line 90
+    .line 91
+    sget-object v1, Lfe3;->p:Landroid/app/UiModeManager;
+
+    .line 92
+    .line 93
+    const/4 v3, 0x4
+
+    .line 94
+    const/4 v4, 0x1
+
+    .line 95
+    const/4 v5, 0x3
+
+    .line 96
+    if-eqz v1, :cond_6e
+
+    .line 97
+    .line 98
+    invoke-virtual {v1}, Landroid/app/UiModeManager;->getCurrentModeType()I
+
+    .line 99
+    .line 100
+    .line 101
+    move-result v1
+
+    .line 102
+    if-eq v1, v4, :cond_6c
+
+    .line 103
+    .line 104
+    if-eq v1, v3, :cond_6a
+
+    .line 105
+    .line 106
+    goto :goto_6e
+
+    .line 107
+    :cond_6a
+    move v1, v4
+
+    .line 108
+    goto :goto_6f
+
+    .line 109
+    :cond_6c
+    move v1, v8
+
+    .line 110
+    goto :goto_6f
+
+    .line 111
+    :cond_6e
+    :goto_6e
+    move v1, v5
+
+    .line 112
+    :goto_6f
+    if-eq v1, v4, :cond_7d
+
+    .line 113
+    .line 114
+    if-eq v1, v8, :cond_7a
+
+    .line 115
+    .line 116
+    if-ne v1, v5, :cond_78
+
+    .line 117
+    .line 118
+    const-string v1, "other"
+
+    .line 119
+    .line 120
+    goto :goto_7f
+
+    .line 121
+    :cond_78
+    const/4 p0, 0x0
+
+    .line 122
+    throw p0
+
+    .line 123
+    :cond_7a
+    const-string v1, "mobile"
+
+    .line 124
+    .line 125
+    goto :goto_7f
+
+    .line 126
+    :cond_7d
+    const-string v1, "ctv"
+
+    .line 127
+    .line 128
+    :goto_7f
+    const-string v6, "deviceCategory"
+
+    .line 129
+    .line 130
+    invoke-static {v0, v6, v1}, Luf2;->b(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 131
+    .line 132
+    .line 133
+    new-instance v1, Lorg/json/JSONArray;
+
+    .line 134
+    .line 135
+    invoke-direct {v1}, Lorg/json/JSONArray;-><init>()V
+
+    .line 136
+    .line 137
+    .line 138
+    const-string v6, "clid"
+
+    .line 139
+    .line 140
+    invoke-virtual {v1, v6}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+
+    .line 141
+    .line 142
+    .line 143
+    const-string v6, "vlid"
+
+    .line 144
+    .line 145
+    invoke-virtual {v1, v6}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+
+    .line 146
+    .line 147
+    .line 148
+    const-string v6, "supports"
+
+    .line 149
+    .line 150
+    invoke-static {v0, v6, v1}, Luf2;->b(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 151
+    .line 152
+    .line 153
+    new-instance v1, Lorg/json/JSONObject;
+
+    .line 154
+    .line 155
+    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
+
+    .line 156
+    .line 157
+    .line 158
+    iget-object v6, p2, Lv30;->f:Ljava/lang/Object;
+
+    .line 159
+    .line 160
+    check-cast v6, Ltk1;
+
+    .line 161
+    .line 162
+    iget-object v7, v6, Ltk1;->f:Ljava/lang/String;
+
+    .line 163
+    .line 164
+    const-string v9, "partnerName"
+
+    .line 165
+    .line 166
+    invoke-static {v1, v9, v7}, Luf2;->b(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 167
+    .line 168
+    .line 169
+    iget-object v6, v6, Ltk1;->g:Ljava/lang/String;
+
+    .line 170
+    .line 171
+    const-string v7, "partnerVersion"
+
+    .line 172
+    .line 173
+    invoke-static {v1, v7, v6}, Luf2;->b(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 174
+    .line 175
+    .line 176
+    const-string v6, "omidNativeInfo"
+
+    .line 177
+    .line 178
+    invoke-static {v0, v6, v1}, Luf2;->b(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 179
+    .line 180
+    .line 181
+    new-instance v1, Lorg/json/JSONObject;
+
+    .line 182
+    .line 183
+    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
+
+    .line 184
+    .line 185
+    .line 186
+    const-string v6, "libraryVersion"
+
+    .line 187
+    .line 188
+    const-string v7, "1.5.2-google_20241009"
+
+    .line 189
+    .line 190
+    invoke-static {v1, v6, v7}, Luf2;->b(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 191
+    .line 192
+    .line 193
+    sget-object v6, Lmf2;->g:Lmf2;
+
+    .line 194
+    .line 195
+    iget-object v6, v6, Lmf2;->f:Landroid/content/Context;
+
+    .line 196
+    .line 197
+    invoke-virtual {v6}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    .line 198
+    .line 199
+    .line 200
+    move-result-object v6
+
+    .line 201
+    invoke-virtual {v6}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    .line 202
+    .line 203
+    .line 204
+    move-result-object v6
+
+    .line 205
+    const-string v7, "appId"
+
+    .line 206
+    .line 207
+    invoke-static {v1, v7, v6}, Luf2;->b(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 208
+    .line 209
+    .line 210
+    invoke-static {v0, v2, v1}, Luf2;->b(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 211
+    .line 212
+    .line 213
+    iget-object v1, p2, Lv30;->k:Ljava/lang/Object;
+
+    .line 214
+    .line 215
+    check-cast v1, Ljava/lang/String;
+
+    .line 216
+    .line 217
+    if-eqz v1, :cond_df
+
+    .line 218
+    .line 219
+    const-string v2, "contentUrl"
+
+    .line 220
+    .line 221
+    invoke-static {v0, v2, v1}, Luf2;->b(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 222
+    .line 223
+    .line 224
+    :cond_df
+    iget-object v1, p2, Lv30;->j:Ljava/lang/Object;
+
+    .line 225
+    .line 226
+    check-cast v1, Ljava/lang/String;
+
+    .line 227
+    .line 228
+    if-eqz v1, :cond_ea
+
+    .line 229
+    .line 230
+    const-string v2, "customReferenceData"
+
+    .line 231
+    .line 232
+    invoke-static {v0, v2, v1}, Luf2;->b(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 233
+    .line 234
+    .line 235
+    :cond_ea
+    new-instance v1, Lorg/json/JSONObject;
+
+    .line 236
+    .line 237
+    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
+
+    .line 238
+    .line 239
+    .line 240
+    iget-object p2, p2, Lv30;->h:Ljava/lang/Object;
+
+    .line 241
+    .line 242
+    check-cast p2, Ljava/util/ArrayList;
+
+    .line 243
+    .line 244
+    invoke-static {p2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    .line 245
+    .line 246
+    .line 247
+    move-result-object p2
+
+    .line 248
+    invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    .line 249
+    .line 250
+    .line 251
+    move-result-object p2
+
+    .line 252
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 253
+    .line 254
+    .line 255
+    move-result v2
+
+    .line 256
+    if-nez v2, :cond_118
+
+    .line 257
+    .line 258
+    sget-object p2, Lkm;->y:Lkm;
+
+    .line 259
+    .line 260
+    invoke-virtual {p0}, Lrf2;->c()Landroid/webkit/WebView;
+
+    .line 261
+    .line 262
+    .line 263
+    move-result-object p0
+
+    .line 264
+    new-array v2, v3, [Ljava/lang/Object;
+
+    .line 265
+    .line 266
+    const/4 v3, 0x0
+
+    .line 267
+    aput-object p1, v2, v3
+
+    .line 268
+    .line 269
+    aput-object v0, v2, v4
+
+    .line 270
+    .line 271
+    aput-object v1, v2, v8
+
+    .line 272
+    .line 273
+    aput-object p3, v2, v5
+
+    .line 274
+    .line 275
+    const-string p1, "startSession"
+
+    .line 276
+    .line 277
+    invoke-virtual {p2, p0, p1, v2}, Lkm;->m(Landroid/webkit/WebView;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 278
+    .line 279
+    .line 280
+    return-void
+
+    .line 281
+    :cond_118
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 282
+    .line 283
+    .line 284
+    move-result-object p0
+
+    .line 285
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 286
+    .line 287
+    .line 288
+    invoke-static {}, Lu1;->l()V
+
+    .line 289
+    .line 290
+    .line 291
+    return-void
+.end method
+
+.method public final f(Ljava/util/Date;)V
+    .registers 5
+
+    .line 1
+    if-nez p1, :cond_3
+
+    .line 2
+    .line 3
+    return-void
+
+    .line 4
+    :cond_3
+    new-instance v0, Lorg/json/JSONObject;
+
+    .line 5
+    .line 6
+    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
+
+    .line 7
+    .line 8
+    .line 9
+    invoke-virtual {p1}, Ljava/util/Date;->getTime()J
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-wide v1
+
+    .line 13
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object p1
+
+    .line 17
+    const-string v1, "timestamp"
+
+    .line 18
+    .line 19
+    invoke-static {v0, v1, p1}, Luf2;->b(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 20
+    .line 21
+    .line 22
+    sget-object p1, Lkm;->y:Lkm;
+
+    .line 23
+    .line 24
+    invoke-virtual {p0}, Lrf2;->c()Landroid/webkit/WebView;
+
+    .line 25
+    .line 26
+    .line 27
+    move-result-object p0
+
+    .line 28
+    const/4 v1, 0x1
+
+    .line 29
+    new-array v1, v1, [Ljava/lang/Object;
+
+    .line 30
+    .line 31
+    const/4 v2, 0x0
+
+    .line 32
+    aput-object v0, v1, v2
+
+    .line 33
+    .line 34
+    const-string v0, "setLastActivity"
+
+    .line 35
+    .line 36
+    invoke-virtual {p1, p0, v0, v1}, Lkm;->m(Landroid/webkit/WebView;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 37
+    .line 38
+    .line 39
+    return-void
+.end method
